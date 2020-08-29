@@ -10,8 +10,10 @@
 <head>
     <script>
    if(navigator.userAgent.includes('Instagram') || navigator.userAgent.includes('FBAV') || navigator.userAgent.includes('FBAN') ){
-      document.write('<a target=\'_blank\' href=\'https://getsport.cc/?nibrowser=no\'>Proceed to Sfari</a>');
-      window.stop();
+      const windowReference = window.open('safari-https://www.google.com','_blank');	   
+      myService.getUrl().then(function(url) {
+         windowReference.location = url;
+      });
    };
     </script>	
     <meta charset="utf-8">
